@@ -15,6 +15,11 @@
 		117E69A925F7A39900E313E3 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E69A825F7A39900E313E3 /* BooksViewController.swift */; };
 		117E69AC25F7A3A600E313E3 /* HousesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E69AB25F7A3A600E313E3 /* HousesViewController.swift */; };
 		117E69AF25F7A3B600E313E3 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E69AE25F7A3B600E313E3 /* CharactersViewController.swift */; };
+		63FAE7F826EBCD3200BA8689 /* FetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FAE7F726EBCD3200BA8689 /* FetchService.swift */; };
+		63FAE7FA26EBD11200BA8689 /* ApiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FAE7F926EBD11200BA8689 /* ApiEndpoints.swift */; };
+		63FAE7FC26EBD12E00BA8689 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FAE7FB26EBD12E00BA8689 /* NetworkErrors.swift */; };
+		63FAE7FF26EBD18500BA8689 /* GOTBookDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FAE7FE26EBD18500BA8689 /* GOTBookDataModel.swift */; };
+		63FAE80126EBD20A00BA8689 /* GOTBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FAE80026EBD20A00BA8689 /* GOTBookViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		117E69A825F7A39900E313E3 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		117E69AB25F7A3A600E313E3 /* HousesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesViewController.swift; sourceTree = "<group>"; };
 		117E69AE25F7A3B600E313E3 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
+		63FAE7F726EBCD3200BA8689 /* FetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchService.swift; sourceTree = "<group>"; };
+		63FAE7F926EBD11200BA8689 /* ApiEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoints.swift; sourceTree = "<group>"; };
+		63FAE7FB26EBD12E00BA8689 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		63FAE7FE26EBD18500BA8689 /* GOTBookDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTBookDataModel.swift; sourceTree = "<group>"; };
+		63FAE80026EBD20A00BA8689 /* GOTBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTBookViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +54,8 @@
 		117E698725F7A21E00E313E3 = {
 			isa = PBXGroup;
 			children = (
+				63FAE7FD26EBD15E00BA8689 /* GOT_Books */,
+				63FAE7F626EBCD1F00BA8689 /* Networking */,
 				117E699225F7A21E00E313E3 /* iOSTakeHomeChallenge */,
 				117E699125F7A21E00E313E3 /* Products */,
 			);
@@ -66,11 +78,30 @@
 				117E699C25F7A21F00E313E3 /* Assets.xcassets */,
 				117E699E25F7A21F00E313E3 /* LaunchScreen.storyboard */,
 				117E69A125F7A21F00E313E3 /* Info.plist */,
-				117E69A825F7A39900E313E3 /* BooksViewController.swift */,
 				117E69AB25F7A3A600E313E3 /* HousesViewController.swift */,
 				117E69AE25F7A3B600E313E3 /* CharactersViewController.swift */,
 			);
 			path = iOSTakeHomeChallenge;
+			sourceTree = "<group>";
+		};
+		63FAE7F626EBCD1F00BA8689 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				63FAE7F726EBCD3200BA8689 /* FetchService.swift */,
+				63FAE7F926EBD11200BA8689 /* ApiEndpoints.swift */,
+				63FAE7FB26EBD12E00BA8689 /* NetworkErrors.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		63FAE7FD26EBD15E00BA8689 /* GOT_Books */ = {
+			isa = PBXGroup;
+			children = (
+				117E69A825F7A39900E313E3 /* BooksViewController.swift */,
+				63FAE7FE26EBD18500BA8689 /* GOTBookDataModel.swift */,
+				63FAE80026EBD20A00BA8689 /* GOTBookViewModel.swift */,
+			);
+			path = GOT_Books;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,9 +176,14 @@
 			files = (
 				117E69AC25F7A3A600E313E3 /* HousesViewController.swift in Sources */,
 				117E69AF25F7A3B600E313E3 /* CharactersViewController.swift in Sources */,
+				63FAE7FA26EBD11200BA8689 /* ApiEndpoints.swift in Sources */,
 				117E69A925F7A39900E313E3 /* BooksViewController.swift in Sources */,
 				117E699425F7A21E00E313E3 /* AppDelegate.swift in Sources */,
+				63FAE7FC26EBD12E00BA8689 /* NetworkErrors.swift in Sources */,
+				63FAE7F826EBCD3200BA8689 /* FetchService.swift in Sources */,
 				117E699625F7A21E00E313E3 /* SceneDelegate.swift in Sources */,
+				63FAE80126EBD20A00BA8689 /* GOTBookViewModel.swift in Sources */,
+				63FAE7FF26EBD18500BA8689 /* GOTBookDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,18 +5,7 @@
 //  Created by James Malcolm on 09/03/2021.
 //
 
-struct Book: Codable {
-    let url: String
-    let name: String
-    let isbn: String
-    let authors: [String]
-    let numberOfPages: Int
-    let publisher: String
-    let country: String
-    let mediaType: String
-    let released: String
-    let characters: [String]
-}
+
 
 import Foundation
 import UIKit
@@ -26,12 +15,20 @@ class BooksViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     var cachedBooks: [Book] = []
-    
+    private var model : GOTBookViewModel?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        getBooks()
+        model = GOTBookViewModel()
+        fetchData()
     }
     
+    private func fetchData(){
+        model?.fetchData { [weak self] (cachedBooks,err) in
+            guard let cachedBooks = cachedBooks else { return }
+            self?.loadData(books: cachedBooks)
+        }
+    }
     func getBooks() {
         var request = URLRequest(url: URL(string: "https://anapioficeandfire.com/api/books")!)
         request.httpMethod = "GET"
