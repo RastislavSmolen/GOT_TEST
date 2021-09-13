@@ -24,6 +24,9 @@
 		63FAE80626EF5D7500BA8689 /* GOTHouseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FAE80526EF5D7500BA8689 /* GOTHouseDataModel.swift */; };
 		63FAE80826EF5DAE00BA8689 /* GOTHouseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FAE80726EF5DAE00BA8689 /* GOTHouseViewModel.swift */; };
 		63FAE80A26EF5F0700BA8689 /* HouseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FAE80926EF5F0700BA8689 /* HouseTableViewCell.swift */; };
+		63FAE80D26EF5F9900BA8689 /* GOTCharacterDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FAE80C26EF5F9900BA8689 /* GOTCharacterDataModel.swift */; };
+		63FAE80F26EF5FA900BA8689 /* GOTHousesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FAE80E26EF5FA900BA8689 /* GOTHousesViewModel.swift */; };
+		63FAE81126EF5FBB00BA8689 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FAE81026EF5FBB00BA8689 /* CharacterTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		63FAE80526EF5D7500BA8689 /* GOTHouseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTHouseDataModel.swift; sourceTree = "<group>"; };
 		63FAE80726EF5DAE00BA8689 /* GOTHouseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTHouseViewModel.swift; sourceTree = "<group>"; };
 		63FAE80926EF5F0700BA8689 /* HouseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseTableViewCell.swift; sourceTree = "<group>"; };
+		63FAE80C26EF5F9900BA8689 /* GOTCharacterDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTCharacterDataModel.swift; sourceTree = "<group>"; };
+		63FAE80E26EF5FA900BA8689 /* GOTHousesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTHousesViewModel.swift; sourceTree = "<group>"; };
+		63FAE81026EF5FBB00BA8689 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 		117E698725F7A21E00E313E3 = {
 			isa = PBXGroup;
 			children = (
+				63FAE80B26EF5F7400BA8689 /* GOT_Characters */,
 				63FAE80426EF5D2C00BA8689 /* GOT_Houses */,
 				63FAE7FD26EBD15E00BA8689 /* GOT_Books */,
 				63FAE7F626EBCD1F00BA8689 /* Networking */,
@@ -87,7 +94,6 @@
 				117E699C25F7A21F00E313E3 /* Assets.xcassets */,
 				117E699E25F7A21F00E313E3 /* LaunchScreen.storyboard */,
 				117E69A125F7A21F00E313E3 /* Info.plist */,
-				117E69AE25F7A3B600E313E3 /* CharactersViewController.swift */,
 			);
 			path = iOSTakeHomeChallenge;
 			sourceTree = "<group>";
@@ -122,6 +128,17 @@
 				63FAE80926EF5F0700BA8689 /* HouseTableViewCell.swift */,
 			);
 			path = GOT_Houses;
+			sourceTree = "<group>";
+		};
+		63FAE80B26EF5F7400BA8689 /* GOT_Characters */ = {
+			isa = PBXGroup;
+			children = (
+				117E69AE25F7A3B600E313E3 /* CharactersViewController.swift */,
+				63FAE80C26EF5F9900BA8689 /* GOTCharacterDataModel.swift */,
+				63FAE80E26EF5FA900BA8689 /* GOTHousesViewModel.swift */,
+				63FAE81026EF5FBB00BA8689 /* CharacterTableViewCell.swift */,
+			);
+			path = GOT_Characters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,16 +211,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63FAE80F26EF5FA900BA8689 /* GOTHousesViewModel.swift in Sources */,
 				117E69AC25F7A3A600E313E3 /* HousesViewController.swift in Sources */,
 				117E69AF25F7A3B600E313E3 /* CharactersViewController.swift in Sources */,
 				63FAE80826EF5DAE00BA8689 /* GOTHouseViewModel.swift in Sources */,
 				63FAE7FA26EBD11200BA8689 /* ApiEndpoints.swift in Sources */,
+				63FAE80D26EF5F9900BA8689 /* GOTCharacterDataModel.swift in Sources */,
 				63FAE80326EC319000BA8689 /* BookTableViewCell.swift in Sources */,
 				117E69A925F7A39900E313E3 /* BooksViewController.swift in Sources */,
 				117E699425F7A21E00E313E3 /* AppDelegate.swift in Sources */,
 				63FAE7FC26EBD12E00BA8689 /* NetworkErrors.swift in Sources */,
 				63FAE80626EF5D7500BA8689 /* GOTHouseDataModel.swift in Sources */,
 				63FAE7F826EBCD3200BA8689 /* FetchService.swift in Sources */,
+				63FAE81126EF5FBB00BA8689 /* CharacterTableViewCell.swift in Sources */,
 				117E699625F7A21E00E313E3 /* SceneDelegate.swift in Sources */,
 				63FAE80126EBD20A00BA8689 /* GOTBookViewModel.swift in Sources */,
 				63FAE80A26EF5F0700BA8689 /* HouseTableViewCell.swift in Sources */,
