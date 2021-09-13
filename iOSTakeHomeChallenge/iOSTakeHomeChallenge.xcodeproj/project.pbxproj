@@ -20,6 +20,7 @@
 		63FAE7FC26EBD12E00BA8689 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FAE7FB26EBD12E00BA8689 /* NetworkErrors.swift */; };
 		63FAE7FF26EBD18500BA8689 /* GOTBookDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FAE7FE26EBD18500BA8689 /* GOTBookDataModel.swift */; };
 		63FAE80126EBD20A00BA8689 /* GOTBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FAE80026EBD20A00BA8689 /* GOTBookViewModel.swift */; };
+		63FAE80326EC319000BA8689 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FAE80226EC319000BA8689 /* BookTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		63FAE7FB26EBD12E00BA8689 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		63FAE7FE26EBD18500BA8689 /* GOTBookDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTBookDataModel.swift; sourceTree = "<group>"; };
 		63FAE80026EBD20A00BA8689 /* GOTBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTBookViewModel.swift; sourceTree = "<group>"; };
+		63FAE80226EC319000BA8689 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				117E69A825F7A39900E313E3 /* BooksViewController.swift */,
 				63FAE7FE26EBD18500BA8689 /* GOTBookDataModel.swift */,
 				63FAE80026EBD20A00BA8689 /* GOTBookViewModel.swift */,
+				63FAE80226EC319000BA8689 /* BookTableViewCell.swift */,
 			);
 			path = GOT_Books;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				117E69AC25F7A3A600E313E3 /* HousesViewController.swift in Sources */,
 				117E69AF25F7A3B600E313E3 /* CharactersViewController.swift in Sources */,
 				63FAE7FA26EBD11200BA8689 /* ApiEndpoints.swift in Sources */,
+				63FAE80326EC319000BA8689 /* BookTableViewCell.swift in Sources */,
 				117E69A925F7A39900E313E3 /* BooksViewController.swift in Sources */,
 				117E699425F7A21E00E313E3 /* AppDelegate.swift in Sources */,
 				63FAE7FC26EBD12E00BA8689 /* NetworkErrors.swift in Sources */,

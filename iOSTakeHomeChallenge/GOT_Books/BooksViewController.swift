@@ -29,25 +29,6 @@ class BooksViewController: UIViewController, UITableViewDataSource {
             self?.loadData(books: cachedBooks)
         }
     }
-    func getBooks() {
-        var request = URLRequest(url: URL(string: "https://anapioficeandfire.com/api/books")!)
-        request.httpMethod = "GET"
-        let config: URLSessionConfiguration = URLSessionConfiguration.default
-        //config.timeoutIntervalForRequest = 15
-        config.httpAdditionalHeaders = [
-            "Content-Type": "application/json"
-        ]
-        let task = URLSession(configuration: config).dataTask(with: request, completionHandler: { (data, response, error) in
-            if (error != nil) {
-                print("Oops")
-            }
-            
-            let books = try! JSONDecoder().decode([Book].self, from: data!)
-            self.loadData(books: books)
-            
-        })
-        task.resume()
-    }
     
     func loadData(books: [Book]) {
         cachedBooks = books
@@ -68,15 +49,4 @@ class BooksViewController: UIViewController, UITableViewDataSource {
     
 }
 
-class BooksTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var pagesLabel: UILabel!
-    
-    func setupWith(book: Book) {
-        titleLabel.text = book.name
-        dateLabel.text = book.released
-        pagesLabel.text =  String(book.numberOfPages)
-    }
-}
+
