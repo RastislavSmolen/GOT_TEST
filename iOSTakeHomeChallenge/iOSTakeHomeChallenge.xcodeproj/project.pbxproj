@@ -68,10 +68,6 @@
 		117E698725F7A21E00E313E3 = {
 			isa = PBXGroup;
 			children = (
-				63FAE80B26EF5F7400BA8689 /* GOT_Characters */,
-				63FAE80426EF5D2C00BA8689 /* GOT_Houses */,
-				63FAE7FD26EBD15E00BA8689 /* GOT_Books */,
-				63FAE7F626EBCD1F00BA8689 /* Networking */,
 				117E699225F7A21E00E313E3 /* iOSTakeHomeChallenge */,
 				117E699125F7A21E00E313E3 /* Products */,
 			);
@@ -88,6 +84,10 @@
 		117E699225F7A21E00E313E3 /* iOSTakeHomeChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				63FAE80B26EF5F7400BA8689 /* GOT_Characters */,
+				63FAE80426EF5D2C00BA8689 /* GOT_Houses */,
+				63FAE7FD26EBD15E00BA8689 /* GOT_Books */,
+				63FAE7F626EBCD1F00BA8689 /* Networking */,
 				117E699325F7A21E00E313E3 /* AppDelegate.swift */,
 				117E699525F7A21E00E313E3 /* SceneDelegate.swift */,
 				117E699925F7A21E00E313E3 /* Main.storyboard */,
