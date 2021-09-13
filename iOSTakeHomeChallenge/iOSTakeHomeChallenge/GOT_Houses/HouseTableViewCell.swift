@@ -18,11 +18,20 @@ class HouseTableViewCell: UITableViewCell {
         let regionsAttributes = [NSAttributedString.Key.font: regionsFont]
         let regionsAttributedString = NSAttributedString(string: String(house.region), attributes: regionsAttributes)
         
+        
         let houseWordsFont = UIFont.italicSystemFont(ofSize: 12)
         let houseWordsAttributes = [NSAttributedString.Key.font: houseWordsFont]
-        let houseWordsAttributedString = NSAttributedString(string: String(house.words), attributes: houseWordsAttributes)
+        let houseWordsAttributedString = NSAttributedString(string: String(wordChecker(words: house.words)), attributes: houseWordsAttributes)
+
         nameLabel.text = house.name
         regionLabel.attributedText = regionsAttributedString
         wordsLabel.attributedText =  houseWordsAttributedString
+    }
+    func wordChecker(words:String)->String {
+        if words.isEmpty {
+           return "No words available"
+        } else {
+            return words
+        }
     }
 }
