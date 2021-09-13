@@ -14,8 +14,15 @@ class HouseTableViewCell: UITableViewCell {
     @IBOutlet weak var wordsLabel: UILabel!
     
     func setupWith(house: House) {
+        let regionsFont = UIFont.systemFont(ofSize: 12)
+        let regionsAttributes = [NSAttributedString.Key.font: regionsFont]
+        let regionsAttributedString = NSAttributedString(string: String(house.region), attributes: regionsAttributes)
+        
+        let houseWordsFont = UIFont.italicSystemFont(ofSize: 12)
+        let houseWordsAttributes = [NSAttributedString.Key.font: houseWordsFont]
+        let houseWordsAttributedString = NSAttributedString(string: String(house.words), attributes: houseWordsAttributes)
         nameLabel.text = house.name
-        regionLabel.text = house.region
-        wordsLabel.text =  house.words
+        regionLabel.attributedText = regionsAttributedString
+        wordsLabel.attributedText =  houseWordsAttributedString
     }
 }
