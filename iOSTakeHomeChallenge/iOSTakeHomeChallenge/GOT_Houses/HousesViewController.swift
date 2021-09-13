@@ -8,15 +8,19 @@
 import Foundation
 import UIKit
 
-class HousesViewController: UIViewController, UITableViewDataSource {
+class HousesViewController: UIViewController, UITableViewDataSource,UISearchBarDelegate {
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet var searchBar: UISearchBar!
+    
     var cachedHouses: [House] = []
+    var filteredHouses: [House] = []
     private var model : GOTHouseViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         model = GOTHouseViewModel()
+        searchBar.delegate = self
         fetchData()
     }
     
@@ -34,14 +38,35 @@ class HousesViewController: UIViewController, UITableViewDataSource {
         }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        cachedHouses.count
+        if searchBar.text == "" {
+            return cachedHouses.count
+        }else {
+            return filteredHouses.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HouseTableViewCell") as! HouseTableViewCell
-        cell.setupWith(house: cachedHouses[indexPath.row])
+        if searchBar.text == "" {
+            cell.setupWith(house: cachedHouses[indexPath.row])
+        }else {
+            cell.setupWith(house: filteredHouses[indexPath.row])
+        }
         return cell
     }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredHouses = searchText.isEmpty ? cachedHouses : cachedHouses.filter({(dataString: House) -> Bool in
+            return dataString.name.range(of: searchText, options: .caseInsensitive) != nil
+        })
+
+        tableView.reloadData()
+    }
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+            self.searchBar.showsCancelButton = true
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+            searchBar.showsCancelButton = false
+            searchBar.text = ""
+            searchBar.resignFirstResponder()
+    }
 }
-
-
